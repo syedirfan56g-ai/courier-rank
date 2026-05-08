@@ -2,7 +2,7 @@
 
 client_id = "8c8f14af7fb11208d955be53884ac069"
 name = "Courier Rank"
-application_url = "https://citizenship-gathered-healthcare-food.trycloudflare.com"
+application_url = "https://courier-rank-syed.vercel.app"
 embedded = true
 
 [build]
@@ -21,9 +21,10 @@ api_version = "2026-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_products,write_orders,read_orders"
 
 [auth]
 redirect_urls = [
-  "https://citizenship-gathered-healthcare-food.trycloudflare.com/api/auth"
+  "https://courier-rank-syed.vercel.app/auth/callback",
+  "https://courier-rank-syed.vercel.app/auth/shopify/callback"
 ]
