@@ -15,7 +15,9 @@ import {
   AppProvider,
 } from "@shopify/polaris";
 import { SearchIcon } from "@shopify/polaris-icons";
-import "@shopify/polaris/build/styles.css";
+import polarisStyles from "@shopify/polaris/build/esm/styles.css?url";
+
+export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
 export default function TestUI() {
   // Mock data for the dashboard (Same as index)
@@ -186,7 +188,8 @@ export default function TestUI() {
                         <Badge tone="critical">High Risk</Badge>
                       </InlineStack>
                     </BlockStack>
-                  </Card>
+                  </BlockStack>
+                </Card>
               </BlockStack>
             </Layout.Section>
           </Layout>
